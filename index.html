@@ -1,0 +1,587 @@
+# `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLAME FIX TECHNICAL SERVICES LLC</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#0c0c0c;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:white;
+    }
+
+    header{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+      backdrop-filter:blur(14px);
+      background:rgba(0,0,0,0.75);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar{
+      width:90%;
+      max-width:1400px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 0;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:800;
+      color:#ff5e14;
+      letter-spacing:1px;
+    }
+
+    .logo span{
+      color:white;
+    }
+
+    nav{
+      display:flex;
+      gap:35px;
+      align-items:center;
+    }
+
+    nav a{
+      font-size:16px;
+      transition:0.3s;
+      position:relative;
+    }
+
+    nav a::after{
+      content:'';
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:0;
+      height:2px;
+      background:#ff5e14;
+      transition:0.3s;
+    }
+
+    nav a:hover::after{
+      width:100%;
+    }
+
+    .call-btn{
+      background:#ff5e14;
+      padding:14px 28px;
+      border-radius:40px;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 0 20px rgba(255,94,20,0.4);
+    }
+
+    .call-btn:hover{
+      transform:translateY(-3px);
+      background:#ff7b3c;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      padding:140px 20px 80px;
+      background:
+      linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+      url('https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+    }
+
+    .hero-card{
+      max-width:1100px;
+      width:100%;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:30px;
+      backdrop-filter:blur(12px);
+      padding:60px;
+      animation:fadeUp 1s ease;
+      box-shadow:0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    .tag{
+      display:inline-block;
+      background:white;
+      color:#ff5e14;
+      padding:10px 24px;
+      border-radius:40px;
+      font-size:14px;
+      font-weight:600;
+      margin-bottom:24px;
+    }
+
+    .hero h1{
+      font-size:72px;
+      line-height:1.1;
+      margin-bottom:25px;
+      font-weight:800;
+    }
+
+    .hero p{
+      color:#dddddd;
+      font-size:18px;
+      line-height:1.9;
+      max-width:900px;
+      margin-bottom:35px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .primary-btn{
+      background:#ff5e14;
+      color:white;
+      padding:16px 34px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 0 25px rgba(255,94,20,0.45);
+    }
+
+    .primary-btn:hover{
+      transform:translateY(-4px);
+    }
+
+    .secondary-btn{
+      border:1px solid rgba(255,255,255,0.2);
+      padding:16px 34px;
+      border-radius:50px;
+      background:rgba(255,255,255,0.08);
+      transition:0.3s;
+    }
+
+    .secondary-btn:hover{
+      background:rgba(255,255,255,0.15);
+    }
+
+    .services{
+      width:90%;
+      max-width:1300px;
+      margin:100px auto;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:52px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#bbbbbb;
+      max-width:700px;
+      margin:auto;
+      line-height:1.8;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .service-card{
+      background:#131313;
+      border:1px solid rgba(255,255,255,0.08);
+      padding:35px;
+      border-radius:24px;
+      transition:0.4s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .service-card::before{
+      content:'';
+      position:absolute;
+      width:120px;
+      height:120px;
+      background:#ff5e14;
+      border-radius:50%;
+      top:-50px;
+      right:-50px;
+      opacity:0.12;
+    }
+
+    .service-card:hover{
+      transform:translateY(-8px);
+      border-color:#ff5e14;
+      box-shadow:0 10px 30px rgba(255,94,20,0.15);
+    }
+
+    .service-icon{
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .service-card h3{
+      font-size:24px;
+      margin-bottom:14px;
+    }
+
+    .service-card p{
+      color:#cfcfcf;
+      line-height:1.8;
+      font-size:15px;
+    }
+
+    .about{
+      width:90%;
+      max-width:1300px;
+      margin:100px auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:30px;
+      object-fit:cover;
+      min-height:450px;
+      box-shadow:0 10px 35px rgba(0,0,0,0.45);
+    }
+
+    .about-content h2{
+      font-size:50px;
+      margin-bottom:20px;
+    }
+
+    .about-content p{
+      color:#d3d3d3;
+      line-height:1.9;
+      margin-bottom:20px;
+    }
+
+    .stats{
+      display:flex;
+      gap:25px;
+      margin-top:30px;
+      flex-wrap:wrap;
+    }
+
+    .stat-box{
+      background:#141414;
+      padding:25px;
+      border-radius:20px;
+      min-width:160px;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat-box h3{
+      color:#ff5e14;
+      font-size:34px;
+      margin-bottom:5px;
+    }
+
+    .contact-section{
+      width:90%;
+      max-width:1300px;
+      margin:100px auto;
+      background:linear-gradient(135deg,#ff5e14,#ff7b3c);
+      padding:60px;
+      border-radius:35px;
+      text-align:center;
+      color:white;
+    }
+
+    .contact-section h2{
+      font-size:52px;
+      margin-bottom:20px;
+    }
+
+    .contact-section p{
+      max-width:750px;
+      margin:auto;
+      line-height:1.8;
+      margin-bottom:35px;
+    }
+
+    .contact-buttons{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .contact-buttons a{
+      background:black;
+      padding:16px 30px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .contact-buttons a:hover{
+      transform:scale(1.05);
+    }
+
+    footer{
+      background:#090909;
+      padding:40px 20px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,0.08);
+      color:#b9b9b9;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:25px;
+      bottom:25px;
+      width:68px;
+      height:68px;
+      background:#25D366;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:34px;
+      z-index:1000;
+      box-shadow:0 0 25px rgba(37,211,102,0.55);
+      animation:pulse 2s infinite;
+    }
+
+    @keyframes pulse{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.08)}
+      100%{transform:scale(1)}
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:992px){
+      .hero h1{
+        font-size:50px;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+
+    @media(max-width:600px){
+      .hero-card{
+        padding:35px 25px;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .section-title h2,
+      .about-content h2,
+      .contact-section h2{
+        font-size:36px;
+      }
+
+      .contact-section{
+        padding:40px 25px;
+      }
+
+      .navbar{
+        width:94%;
+      }
+
+      .logo{
+        font-size:22px;
+      }
+
+      .call-btn{
+        padding:12px 18px;
+        font-size:14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">FLAME <span>FIX</span></div>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="tel:+971565886219" class="call-btn">+971 565886219</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <div class="tag">Professional Technical & Ventilation Services In UAE</div>
+
+      <h1>
+        FLAME FIX TECHNICAL SERVICES LLC
+      </h1>
+
+      <p>
+        We provide professional kitchen ventilation installation, AC ducting, exhaust systems, maintenance, technical services, and commercial solutions across the UAE. Our expert team delivers modern, safe, and high-quality workmanship designed for restaurants, commercial kitchens, and industrial environments.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#services" class="primary-btn">Explore Services</a>
+        <a href="tel:0561426314" class="secondary-btn">Call Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-title">
+      <h2>Our Premium Services</h2>
+      <p>
+        Advanced commercial kitchen and technical solutions built with modern safety standards and professional engineering support.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🔥</div>
+        <h3>Kitchen Ventilation</h3>
+        <p>
+          High-performance ventilation systems for restaurants and commercial kitchens with professional airflow optimization.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">❄️</div>
+        <h3>AC Duct Installation</h3>
+        <p>
+          Advanced air conditioning duct setup and maintenance services for commercial and industrial buildings.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🛠️</div>
+        <h3>Technical Maintenance</h3>
+        <p>
+          Reliable maintenance and repair services with experienced technicians available for urgent support.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Commercial Solutions</h3>
+        <p>
+          Professional commercial infrastructure services customized for restaurants, hotels, and business environments.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop" alt="Commercial Kitchen">
+
+    <div class="about-content">
+      <h2>Why Choose Flame Fix?</h2>
+
+      <p>
+        FLAME FIX TECHNICAL SERVICES LLC is committed to delivering high-quality technical services with modern equipment, experienced staff, and premium customer support.
+      </p>
+
+      <p>
+        Our mission is to provide reliable, safe, and efficient technical solutions that help businesses maintain top-level operational performance.
+      </p>
+
+      <div class="stats">
+
+        <div class="stat-box">
+          <h3>250+</h3>
+          <span>Projects Completed</span>
+        </div>
+
+        <div class="stat-box">
+          <h3>24/7</h3>
+          <span>Support Service</span>
+        </div>
+
+        <div class="stat-box">
+          <h3>100%</h3>
+          <span>Client Satisfaction</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h2>Contact Us Today</h2>
+
+    <p>
+      Looking for professional ventilation, AC ducting, or technical maintenance services in UAE? Contact FLAME FIX TECHNICAL SERVICES LLC now.
+    </p>
+
+    <div class="contact-buttons">
+      <a href="tel:+971565886219">📞 +971 565886219</a>
+      <a href="tel:0561426314">📞 0561426314</a>
+      <a href="https://wa.me/971565886219" target="_blank">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 FLAME FIX TECHNICAL SERVICES LLC — All Rights Reserved.
+  </footer>
+
+  <a href="https://wa.me/971565886219" target="_blank" class="whatsapp">
+    💬
+  </a>
+
+</body>
+</html>
+
+
