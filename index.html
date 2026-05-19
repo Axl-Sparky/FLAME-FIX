@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>FLAMEFIX TECHNICAL SERVICES L.L.C</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,10 +55,10 @@
       position:fixed;
       top:0;
       left:0;
-      z-index:999;
+      z-index:9999;
       backdrop-filter:blur(18px);
-      background:rgba(0,0,0,0.65);
-      border-bottom:1px solid rgba(255,255,255,0.08);
+      background:rgba(0,0,0,0.72);
+      border-bottom:1px solid rgba(255,255,255,0.06);
     }
 
     .navbar{
@@ -65,7 +68,7 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:18px 0;
+      padding:16px 0;
     }
 
     .logo img{
@@ -95,7 +98,7 @@
       height:2px;
       background:#00ff66;
       transition:0.3s;
-      box-shadow:0 0 10px #00ff66;
+      box-shadow:0 0 12px #00ff66;
     }
 
     nav a:hover{
@@ -108,8 +111,22 @@
 
     .menu-btn{
       display:none;
-      font-size:28px;
+      width:52px;
+      height:52px;
+      border-radius:18px;
+      background:#101010;
+      border:1px solid rgba(255,255,255,0.08);
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
       cursor:pointer;
+      transition:0.3s;
+    }
+
+    .menu-btn:hover{
+      border-color:#00ff66;
+      color:#00ff66;
+      box-shadow:0 0 20px rgba(0,255,102,0.2);
     }
 
     /* HERO */
@@ -119,8 +136,8 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:150px 20px 80px;
-      position:relative;
+      text-align:center;
+      padding:150px 20px 90px;
 
       background:
       linear-gradient(rgba(0,0,0,0.78),rgba(0,0,0,0.82)),
@@ -129,15 +146,14 @@
 
     .hero-content{
       max-width:1100px;
-      text-align:center;
       animation:fadeUp 1s ease;
     }
 
     .hero-content h1{
-      font-size:75px;
+      font-size:78px;
       font-weight:800;
       line-height:1.1;
-      margin-bottom:25px;
+      margin-bottom:28px;
 
       background:linear-gradient(to right,#00ff66,#ffffff);
       -webkit-background-clip:text;
@@ -145,20 +161,20 @@
     }
 
     .hero-content p{
-      color:#d5d5d5;
+      color:#d7d7d7;
       font-size:18px;
       line-height:1.9;
       max-width:950px;
       margin:auto;
     }
 
-    /* SECTION */
+    /* COMMON */
 
     section{
       width:92%;
       max-width:1400px;
       margin:auto;
-      padding:100px 0;
+      padding:110px 0;
     }
 
     .section-title{
@@ -167,8 +183,8 @@
     }
 
     .section-title h2{
-      font-size:55px;
-      margin-bottom:15px;
+      font-size:58px;
+      margin-bottom:16px;
 
       background:linear-gradient(to right,#00ff66,#ffffff);
       -webkit-background-clip:text;
@@ -177,9 +193,9 @@
 
     .section-title p{
       color:#bdbdbd;
-      max-width:800px;
-      margin:auto;
       line-height:1.9;
+      max-width:820px;
+      margin:auto;
     }
 
     /* SERVICES */
@@ -191,18 +207,19 @@
     }
 
     .service-card{
-      background:#0f0f0f;
+      background:rgba(15,15,15,0.92);
       border:1px solid rgba(255,255,255,0.06);
-      border-radius:28px;
+      border-radius:30px;
       overflow:hidden;
       transition:0.4s;
       position:relative;
+      backdrop-filter:blur(12px);
     }
 
     .service-card:hover{
       transform:translateY(-10px);
       border-color:#00ff66;
-      box-shadow:0 0 25px rgba(0,255,102,0.18);
+      box-shadow:0 0 30px rgba(0,255,102,0.16);
     }
 
     .service-image{
@@ -227,13 +244,13 @@
     }
 
     .service-content h3{
+      color:#00ff66;
       font-size:24px;
       margin-bottom:15px;
-      color:#00ff66;
     }
 
     .service-content p{
-      color:#cfcfcf;
+      color:#d0d0d0;
       line-height:1.8;
       font-size:15px;
     }
@@ -249,11 +266,11 @@
 
     .about-image img{
       border-radius:30px;
-      box-shadow:0 10px 35px rgba(0,0,0,0.55);
+      box-shadow:0 10px 40px rgba(0,0,0,0.6);
     }
 
     .about-content h2{
-      font-size:52px;
+      font-size:54px;
       margin-bottom:25px;
 
       background:linear-gradient(to right,#00ff66,#ffffff);
@@ -265,29 +282,35 @@
       color:#d0d0d0;
       line-height:2;
       margin-bottom:20px;
-      font-size:16px;
     }
 
     .about-boxes{
       display:flex;
       gap:20px;
       flex-wrap:wrap;
-      margin-top:30px;
+      margin-top:35px;
     }
 
     .about-box{
-      background:#111;
+      background:#101010;
       border:1px solid rgba(255,255,255,0.08);
-      padding:25px;
-      border-radius:22px;
+      padding:26px;
+      border-radius:24px;
       min-width:170px;
       text-align:center;
+      transition:0.3s;
+    }
+
+    .about-box:hover{
+      border-color:#00ff66;
+      transform:translateY(-5px);
+      box-shadow:0 0 20px rgba(0,255,102,0.12);
     }
 
     .about-box h3{
       font-size:34px;
       color:#00ff66;
-      margin-bottom:6px;
+      margin-bottom:8px;
     }
 
     /* CONTACT */
@@ -299,23 +322,24 @@
     }
 
     .contact-card{
-      background:#0f0f0f;
-      border-radius:28px;
-      padding:35px;
+      background:rgba(15,15,15,0.92);
+      border-radius:30px;
+      padding:38px;
       border:1px solid rgba(255,255,255,0.08);
       transition:0.3s;
+      backdrop-filter:blur(12px);
     }
 
     .contact-card:hover{
       border-color:#00ff66;
       transform:translateY(-6px);
-      box-shadow:0 0 25px rgba(0,255,102,0.15);
+      box-shadow:0 0 28px rgba(0,255,102,0.14);
     }
 
     .contact-card h3{
       color:#00ff66;
-      margin-bottom:18px;
       font-size:28px;
+      margin-bottom:18px;
     }
 
     .contact-card p{
@@ -326,8 +350,8 @@
 
     .contact-btn{
       display:inline-block;
-      margin-top:15px;
-      padding:14px 28px;
+      margin-top:18px;
+      padding:14px 30px;
       border-radius:40px;
       background:#00ff66;
       color:black;
@@ -345,17 +369,33 @@
     footer{
       background:#090909;
       text-align:center;
-      padding:35px 20px;
+      padding:45px 20px;
       border-top:1px solid rgba(255,255,255,0.08);
-      color:#9f9f9f;
+    }
+
+    .footer-logo{
+      color:#00ff66;
+      font-size:22px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .footer-text{
+      color:#b9b9b9;
+      margin-bottom:10px;
+    }
+
+    .footer-copy{
+      color:#707070;
+      font-size:14px;
     }
 
     /* WHATSAPP */
 
     .whatsapp{
       position:fixed;
-      right:25px;
-      bottom:25px;
+      right:22px;
+      bottom:22px;
       width:72px;
       height:72px;
       border-radius:50%;
@@ -363,12 +403,18 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:34px;
       color:black;
-      z-index:999;
+      z-index:9999;
       box-shadow:0 0 25px rgba(0,255,102,0.55);
       animation:pulse 2s infinite;
+      transition:0.3s;
     }
+
+    .whatsapp:hover{
+      transform:scale(1.08);
+    }
+
+    /* ANIMATION */
 
     @keyframes pulse{
       0%{transform:scale(1)}
@@ -388,7 +434,7 @@
       }
     }
 
-    /* MOBILE */
+    /* TABLET */
 
     @media(max-width:992px){
 
@@ -397,27 +443,45 @@
       }
 
       .hero-content h1{
-        font-size:52px;
-      }
-
-      nav{
-        gap:20px;
+        font-size:55px;
       }
 
     }
 
+    /* MOBILE */
+
     @media(max-width:700px){
 
       nav{
-        display:none;
+        position:fixed;
+        top:92px;
+        right:-100%;
+        width:280px;
+        background:rgba(10,10,10,0.98);
+        backdrop-filter:blur(18px);
+        border:1px solid rgba(255,255,255,0.08);
+        border-radius:28px;
+        padding:32px;
+        flex-direction:column;
+        gap:28px;
+        transition:0.4s;
+        box-shadow:0 0 30px rgba(0,255,102,0.12);
+      }
+
+      nav.active{
+        right:20px;
       }
 
       .menu-btn{
-        display:block;
+        display:flex;
       }
 
       .hero-content h1{
         font-size:40px;
+      }
+
+      .hero-content p{
+        font-size:16px;
       }
 
       .section-title h2{
@@ -428,10 +492,6 @@
         font-size:40px;
       }
 
-      .hero-content p{
-        font-size:16px;
-      }
-
       .logo img{
         height:58px;
       }
@@ -440,14 +500,20 @@
         height:210px;
       }
 
+      .whatsapp{
+        width:65px;
+        height:65px;
+      }
+
     }
 
   </style>
+
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- HEADER -->
 
   <header>
 
@@ -457,20 +523,24 @@
         <img src="images/logo.png" alt="FlameFix Logo">
       </a>
 
-      <nav>
-        <a href="#">Home</a>
+      <nav id="mobileMenu">
+
+        <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+
       </nav>
 
-      <div class="menu-btn">☰</div>
+      <div class="menu-btn" id="menuBtn">
+        ☰
+      </div>
 
     </div>
 
   </header>
 
-  <!-- HOME -->
+  <!-- HERO -->
 
   <section class="hero" id="home">
 
@@ -481,7 +551,7 @@
       </h1>
 
       <p>
-        Professional technical solutions for commercial kitchens, ventilation systems, gas pipeline works, exhaust systems, chiller & freezer services, electronic repair, and industrial maintenance across UAE. We deliver reliable, modern, and high-quality workmanship with safety and customer satisfaction as our top priority.
+        Professional technical solutions for commercial kitchens, ventilation systems, gas pipeline works, exhaust systems, chiller & freezer services, fabrication works, electronic repair, and industrial maintenance across UAE.
       </p>
 
     </div>
@@ -493,139 +563,123 @@
   <section id="services">
 
     <div class="section-title">
+
       <h2>Our Services</h2>
 
       <p>
         Professional commercial kitchen and technical support services designed for restaurants, industrial spaces, hotels, and businesses across UAE.
       </p>
+
     </div>
 
     <div class="services-grid">
 
-      <!-- SERVICE 1 -->
+      <!-- SERVICE -->
 
       <div class="service-card">
-
         <div class="service-image">
           <img src="images/gas-burner.png" alt="">
         </div>
 
         <div class="service-content">
           <h3>GAS BURNER SERVICES</h3>
-
           <p>
-            Professional gas burner installation, repair, servicing, and maintenance solutions for commercial kitchens.
+            Professional gas burner installation, repair, servicing, and maintenance solutions.
           </p>
         </div>
-
       </div>
 
-      <!-- SERVICE 2 -->
-
       <div class="service-card">
-
         <div class="service-image">
           <img src="images/gas-pipeline.png" alt="">
         </div>
 
         <div class="service-content">
           <h3>GAS PIPE LINE WORKS</h3>
-
           <p>
-            Safe and professional gas pipeline installation and maintenance services with advanced safety standards.
+            Safe and professional gas pipeline installation and maintenance services.
           </p>
         </div>
-
       </div>
 
-      <!-- SERVICE 3 -->
-
       <div class="service-card">
-
         <div class="service-image">
           <img src="images/hood-cleaning.png" alt="">
         </div>
 
         <div class="service-content">
           <h3>KITCHEN HOOD CLEANING</h3>
-
           <p>
-            Deep cleaning and maintenance of kitchen hood systems for better airflow and hygiene.
+            Deep cleaning and maintenance of kitchen hood systems for hygiene.
           </p>
         </div>
-
       </div>
 
-      <!-- SERVICE 4 -->
-
       <div class="service-card">
-
         <div class="service-image">
           <img src="images/chiller-freezer.png" alt="">
         </div>
 
         <div class="service-content">
           <h3>CHILLER & FREEZER SERVICE</h3>
-
           <p>
-            Professional repair and servicing solutions for chillers, freezers, and cooling systems.
+            Professional repair and servicing solutions for cooling systems.
           </p>
         </div>
-
       </div>
 
-      <!-- SERVICE 5 -->
-
       <div class="service-card">
-
         <div class="service-image">
           <img src="images/hood-settings.png" alt="">
         </div>
 
         <div class="service-content">
           <h3>KITCHEN HOOD SETTINGS</h3>
-
           <p>
-            Modern kitchen hood setup and adjustment services for efficient ventilation performance.
+            Modern kitchen hood setup and ventilation adjustment services.
           </p>
         </div>
-
       </div>
 
-      <!-- SERVICE 6 -->
-
       <div class="service-card">
-
         <div class="service-image">
           <img src="images/exhaust-fan.png" alt="">
         </div>
 
         <div class="service-content">
           <h3>EXHAUST FAN FITTING & SERVICE</h3>
-
           <p>
-            Exhaust fan installation, fitting, repair, and maintenance solutions for commercial systems.
+            Exhaust fan installation and maintenance for commercial systems.
           </p>
         </div>
-
       </div>
 
-      <!-- SERVICE 7 -->
-
       <div class="service-card">
-
         <div class="service-image">
           <img src="images/electronic-repair.png" alt="">
         </div>
 
         <div class="service-content">
           <h3>ELECTRONIC REPAIR</h3>
-
           <p>
-            Reliable electronic troubleshooting and repair services handled by experienced technicians.
+            Reliable electronic troubleshooting and repair solutions.
           </p>
         </div>
+      </div>
 
+      <!-- NEW SERVICE -->
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="images/fabrication-works.png" alt="">
+        </div>
+
+        <div class="service-content">
+          <h3>FABRICATION WORKS</h3>
+          <p>
+            Professional stainless steel and metal fabrication works for commercial kitchens and industrial systems.
+          </p>
+        </div>
       </div>
 
     </div>
@@ -647,11 +701,11 @@
         <h2>Why Choose FlameFix?</h2>
 
         <p>
-          FLAMEFIX TECHNICAL SERVICES L.L.C is dedicated to delivering reliable, high-quality, and professional technical services across UAE. We combine modern technology, experienced technicians, and strong customer support to provide long-lasting solutions for commercial kitchens and industrial systems.
+          FLAMEFIX TECHNICAL SERVICES L.L.C is dedicated to delivering reliable, professional, and high-quality technical services across UAE with modern equipment and experienced technicians.
         </p>
 
         <p>
-          Our commitment to safety, efficiency, and customer satisfaction makes us a trusted partner for businesses seeking premium maintenance and technical support services.
+          Our commitment to safety, efficiency, and customer satisfaction makes us a trusted partner for businesses seeking premium commercial kitchen and industrial support services.
         </p>
 
         <div class="about-boxes">
@@ -684,11 +738,13 @@
   <section id="contact">
 
     <div class="section-title">
+
       <h2>Contact Us</h2>
 
       <p>
         Contact FLAMEFIX TECHNICAL SERVICES L.L.C for professional commercial kitchen and technical services in UAE.
       </p>
+
     </div>
 
     <div class="contact-wrapper">
@@ -711,7 +767,7 @@
         <h3>WhatsApp Support</h3>
 
         <p>
-          Chat directly with our support team for quick service assistance and business inquiries.
+          Chat directly with our support team for quick assistance and service inquiries.
         </p>
 
         <a href="https://wa.me/+971565886219?text=Testing....!" target="_blank" class="contact-btn">
@@ -742,15 +798,43 @@
 
   <footer>
 
-    © 2026 FLAMEFIX TECHNICAL SERVICES L.L.C — All Rights Reserved.
+    <div class="footer-logo">
+      FLAMEFIX TECHNICAL SERVICES L.L.C
+    </div>
+
+    <div class="footer-text">
+      Professional Technical & Commercial Kitchen Solutions In UAE
+    </div>
+
+    <div class="footer-copy">
+      © 2026 All Rights Reserved • Designed With Excellence
+    </div>
 
   </footer>
 
   <!-- WHATSAPP -->
 
   <a href="https://wa.me/+971565886219?text=Testing....!" target="_blank" class="whatsapp">
-    💬
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 8.014 0C3.597 0 0 3.593 0 8.014a7.94 7.94 0 0 0 1.09 4.008L0 16l4.106-1.077a7.98 7.98 0 0 0 3.908 1.004h.003c4.417 0 8.014-3.593 8.014-8.014a7.95 7.95 0 0 0-2.43-5.587z"/>
+    </svg>
+
   </a>
 
+  <!-- MOBILE MENU SCRIPT -->
+
+  <script>
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.onclick = () => {
+      mobileMenu.classList.toggle('active');
+    }
+
+  </script>
+
 </body>
+
 </html>
